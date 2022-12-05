@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <!-- MDUI CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <title>MaimaiDX Rating Image</title>
+</head>
+
+<body style="background: #51bcf3;" class="mdui-theme-primary-pink mdui-theme-accent-pink">
+
+    <div class="mdui-container">
+        <h1>MaimaiDX Rating Image Help</h1>
+        <div class="mdui-row mdui-typo">
+            <div class="mdui-container doc-container">
+                <h1 class="doc-title mdui-text-color-theme">帮助文档</h1>
+                <div class="doc-intro mdui-typo">
+                    <p>MaimaiDX Rating Image：给您全新的Rating分析体验！</p>
+                </div>
+                <nav class="doc-toc mdui-text-color-theme">
+                    <blockquote>
+                        <ul>
+                            <li><a data-scroll="" href="#info">前言</a></li>
+                            <li><a data-scroll="" href="#prepare">准备工作</a></li>
+                            <li><a data-scroll="" href="#table">生成表格</a></li>
+                            <li><a data-scroll="" href="#meaning">各项参数含义</a></li>
+                            <li><a data-scroll="" href="#howitwork">计算原理</a></li>
+                        </ul>
+                    </blockquote>
+                </nav>
+                <div class="doc-chapter">
+                    <div class="mdui-typo">
+                        <h2 class="doc-chapter-title mdui-text-color-theme">前言
+                            <a class="doc-anchor" id="info"></a>
+                        </h2>
+                        <p>此项目完全开源</p>
+                        <p>数据来源：<a href="https://otohi.me/">https://otohi.me/</a></p>
+                        <p>数据来源：<a href="https://arcade-songs.zetaraku.dev/">https://arcade-songs.zetaraku.dev/</a></p>
+
+                        <h2 class="doc-chapter-title mdui-text-color-theme">准备工作
+                            <a class="doc-anchor" id="prepare"></a>
+                        </h2>
+                        <p>进入<a href="https://otohi.me/">Otohime</a>，注册账号并创建成绩单。</p>
+                        <p>*成绩单隐私设定必须设置为公开</p>
+                        <p>参考这个链接：<a href="https://littlebtc.gitbook.io/otohime-docs/bookmarklet-help">https://littlebtc.gitbook.io/otohime-docs/bookmarklet-help</a> 上传成绩到成绩单</p>
+                        <p>成功之后回到【MaimaiDX Rating Image】</p>
+                        <h2 class="doc-chapter-title mdui-text-color-theme">生成表格
+                            <a class="doc-anchor" id="table"></a>
+                        </h2>
+                        <p>在【Username】中输入自己在Otohime创建的成绩单名称。</p>
+                        <p>点击【开始】即可生成表格式成绩单(已废弃)</p>
+                        <p>点击【生成高质量图片】即可生成高质量图片式成绩单（beta）</p>
+                        <p>点击【这玩意咋用我不会】即可进入帮助文档（此文档）</p>
+                        <h2 class="doc-chapter-title mdui-text-color-theme">各项参数含义
+                            <a class="doc-anchor" id="meaning"></a>
+                        </h2>
+                        <p>暂无</p>
+                        <h2 class="doc-chapter-title mdui-text-color-theme">计算原理
+                            <a class="doc-anchor" id="howitwork"></a>
+                        </h2>
+                        <p>maimai DX 的內部等級（有些人稱譜面定數）是每一個譜面於系統內額外區分的等級，用於計算每首歌的 Rating 佔分。這個數字遊戲廠商並沒有公開，只能由玩家實際遊玩時根據 Rating 加減值估算。</p>
+                        <p>Rating 佔分的計算 = 內部等級 * Rank 係數 * 達成率，最後小數點無條件捨去</p>
+                        <p>Rank 係數視達成的分數而定，A 為 13.6，SSS+ 為 22.4。達成率若在 100.5% 以上，以 100.5% 記，因此 100.5% 以上就能拿到該首全部 Rating 佔分，系統會顯示「拿滿」。</p>
+                        <p>最後 Rating 會由佔分中最高的 15 個新曲譜面，跟 35 個舊曲譜面相加產生。</p>
+                        <p>*引用自：<a href="https://littlebtc.gitbook.io/otohime-docs/internal-lv">https://littlebtc.gitbook.io/otohime-docs/internal-lv</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- MDUI JavaScript -->
+    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+</body>
+
+</html>
